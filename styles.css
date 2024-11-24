@@ -9,7 +9,7 @@ body {
 
 /* Header avec logo et menu de navigation */
 header {
-  background-color: #0d6efd;
+  background-color: #FF4B33;
   color: white;
   padding: 10px 20px;
   position: relative;
@@ -80,7 +80,7 @@ header {
 
 .menu a:hover {
   background-color: #0056b3;
-  color: #ffdd57;
+  color: #ffffff;
 }
 
 /* Styles spécifiques pour mobile (max-width: 768px) */
@@ -98,7 +98,7 @@ header {
     position: absolute;
     top: 70px;
     right: 0;
-    background-color: #0d6efd;
+    background-color: #FF4B33;
     padding: 20px;
     border-radius: 8px;
     width: 200px;
@@ -123,6 +123,7 @@ header {
   height: 50vh; /* Prendre la moitié de la hauteur de l'écran */
   padding: 20px 0; /* Padding en haut et en bas uniquement */
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   border-radius: 0; /* Coins carrés pour le conteneur */
@@ -158,14 +159,14 @@ header {
 
 .filter select:focus,
 .filter input:focus {
-  border-color: #0d6efd;
+  border-color: #FF4B33;
 }
 
 /* Bouton de recherche */
 button#filter-btn {
   flex: 1 1 50px;
   padding: 10px;
-  background-color: #0d6efd;
+  background-color: #FF4B33;
   color: white;
   border: none;
   border-radius: 10px; /* Coins arrondis pour le bouton de recherche */
@@ -257,7 +258,7 @@ button#filter-btn:hover {
 
 #contact h2, #contact h3 {
   text-align: center;
-  color: #0d6efd;
+  color: #FF4B33;
 }
 
 #contact form {
@@ -278,7 +279,7 @@ button#filter-btn:hover {
 
 #contact form button {
   padding: 15px;
-  background-color: #0d6efd;
+  background-color: #FF4B33;
   color: white;
   border: none;
   border-radius: 5px;
@@ -309,7 +310,6 @@ button#filter-btn:hover {
   }
 
   #filters {
-    flex-direction: column;
     align-items: stretch;
     padding: 15px;
   }
@@ -332,4 +332,85 @@ button#filter-btn:hover {
     width: 90%;
     margin: 10px 0;
   }
+}
+footer {
+  background-color: #FF4B33;
+  color: white;
+  padding: 20px 0;
+  font-size: 0.9rem;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.footer-logo img {
+  height: 50px;
+  object-fit: contain;
+}
+
+.footer-info {
+  flex: 1 1 300px;
+  text-align: center;
+}
+
+.footer-info a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer-info a:hover {
+  text-decoration: underline;
+}
+
+.footer-links {
+  flex: 1 1 300px;
+  text-align: center;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.footer-links ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer-links ul li a:hover {
+  color: #FF4B33;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 10px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  margin-top: 20px;
+}
+/* Styles pour l'en-tête des filtres */
+.filters-header {
+  text-align: center;
+  margin-bottom: 20px;
+  display: block; /* S'assure que les éléments prennent toute la largeur */
+  width: 100%; /* Garde les titres au-dessus */
+}
+
+.filters-header h1 {
+  font-size: 2rem; /* Taille uniforme pour les deux lignes */
+  margin: 5px 0; /* Espacement entre les lignes */
+  font-weight: bold;
+  color: #FF4B33; /* Couleur principale */
 }
