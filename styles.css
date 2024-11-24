@@ -1,0 +1,336 @@
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Header avec logo et menu de navigation */
+header {
+  background-color: #0d6efd;
+  color: white;
+  padding: 10px 20px;
+  position: relative;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo-container {
+  flex-shrink: 0;
+}
+
+.logo-container a {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 50px;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+/* Bouton menu burger (visible uniquement sur mobile) */
+.burger-menu {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  z-index: 10;
+}
+
+/* Menu de navigation (desktop) */
+.menu {
+  flex-grow: 1;
+}
+
+.menu ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  list-style: none;
+}
+
+.menu a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding: 10px 15px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border-radius: 4px;
+}
+
+.menu a:hover {
+  background-color: #0056b3;
+  color: #ffdd57;
+}
+
+/* Styles spécifiques pour mobile (max-width: 768px) */
+@media (max-width: 768px) {
+  .header-container {
+    position: relative;
+  }
+
+  .burger-menu {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background-color: #0d6efd;
+    padding: 20px;
+    border-radius: 8px;
+    width: 200px;
+    z-index: 5;
+  }
+
+  .menu ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .menu.show {
+    display: block;
+  }
+}
+
+/* Conteneur de la section filters */
+#filters-container {
+  background: url('https://cdn.jdpower.com/Pros%20And%20Cons%20Of%20A%20Dealer%20Trade.jpg') no-repeat center center;
+  background-size: cover;
+  height: 50vh; /* Prendre la moitié de la hauteur de l'écran */
+  padding: 20px 0; /* Padding en haut et en bas uniquement */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0; /* Coins carrés pour le conteneur */
+  margin: 0; /* Pas de marge pour coller au header */
+  width: 100%; /* Prendre toute la largeur de la page */
+}
+
+/* Filters section */
+#filters {
+  background-color: rgba(255, 255, 255, 0.9); /* Fond blanc légèrement transparent pour la section des filtres */
+  padding: 20px;
+  border-radius: 15px; /* Coins arrondis pour la section des filtres */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-between;
+  max-width: 900px;
+}
+
+.filter {
+  flex: 1 1 150px;
+}
+
+.filter select,
+.filter input {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 10px; /* Coins arrondis pour chaque filtre */
+  outline: none;
+}
+
+.filter select:focus,
+.filter input:focus {
+  border-color: #0d6efd;
+}
+
+/* Bouton de recherche */
+button#filter-btn {
+  flex: 1 1 50px;
+  padding: 10px;
+  background-color: #0d6efd;
+  color: white;
+  border: none;
+  border-radius: 10px; /* Coins arrondis pour le bouton de recherche */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  margin-top: 10px;
+}
+
+button#filter-btn:hover {
+  background-color: #0056b3;
+}
+
+.search-icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* Catalogue section */
+#catalogue {
+  margin: 30px auto;
+  padding: 20px;
+  max-width: 1100px;
+}
+
+#catalogue h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  color: #333;
+}
+
+#annonces {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Car cards */
+.car-card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  width: 250px;
+  padding: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.car-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.car-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.car-card h3 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.car-card p {
+  font-size: 0.9rem;
+  margin: 5px 0;
+  color: #666;
+}
+
+/* Contact section */
+#contact {
+  margin: 30px auto;
+  padding: 20px;
+  max-width: 800px;
+  background-color: white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+#contact h2, #contact h3 {
+  text-align: center;
+  color: #0d6efd;
+}
+
+#contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#contact form label {
+  font-weight: bold;
+}
+
+#contact form input, #contact form textarea {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+#contact form button {
+  padding: 15px;
+  background-color: #0d6efd;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#contact form button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu ul {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  #filters-container {
+    height: 100vh; /* Prendre toute la hauteur de l'écran en mobile */
+    padding: 20px;
+  }
+
+  #filters {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 15px;
+  }
+
+  .filter {
+    flex: 1 1 100%;
+  }
+
+  button#filter-btn {
+    width: 100%;
+    height: auto;
+  }
+
+  #annonces {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .car-card {
+    width: 90%;
+    margin: 10px 0;
+  }
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DBK Auto - Garage Automobile</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- En-tête du site avec logo et menu de navigation -->
+  <header>
+  <div class="header-container">
+    <div class="logo-container">
+      <a href="index.html">
+        <img src="https://i.ibb.co/ypW8txz/logodbk.png" alt="Logo de DBK Auto" class="logo">
+      </a>
+    </div>
+    <button id="burger-menu" class="burger-menu" aria-label="Menu">☰</button>
+    <nav class="menu" id="nav-menu">
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="annonces.html">Annonces</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+  <!-- Nouveau conteneur pour la section filters -->
+  <div id="filters-container">
+    <div id="filters">
+      <div class="filter">
+        <select id="brand" name="brand">
+          <option value="">Marque</option>
+        </select>
+      </div>
+    
+      <div class="filter">
+        <select id="model" name="model" disabled>
+          <option value="">Modèle</option>
+        </select>
+      </div>
+    
+      <div class="filter">
+        <select id="gearbox" name="gearbox">
+          <option value="">Boîte</option>
+          <option value="manuelle">Manuelle</option>
+          <option value="automatique">Automatique</option>
+        </select>
+      </div>
+    
+      <div class="filter">
+        <select id="price" name="price">
+          <option value="">Prix max</option>
+          <option value="10000">10 000</option>
+          <option value="15000">15 000</option>
+          <option value="20000">20 000</option>
+        </select>
+      </div>
+    
+      <button id="filter-btn">
+        <img src="https://i.ibb.co/cY0CjVN/search-13-xxl.png" alt="Rechercher" class="search-icon">
+      </button>
+    </div>
+    
+  </div>
+
+
+  <!-- Section du catalogue -->
+  <section id="catalogue">
+    <div id="annonces"></div>
+  </section>
+
+  <!-- Appel du script JS -->
+  <script src="script.js"></script>
+</body>
+</html>
