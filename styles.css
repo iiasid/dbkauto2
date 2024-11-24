@@ -9,7 +9,7 @@ body {
 
 /* Header avec logo et menu de navigation */
 header {
-  background-color: #FF4B33;
+  background-color: #b13030;
   color: white;
   padding: 10px 20px;
   position: relative;
@@ -98,7 +98,7 @@ header {
     position: absolute;
     top: 70px;
     right: 0;
-    background-color: #FF4B33;
+    background-color: #b13030;
     padding: 20px;
     border-radius: 8px;
     width: 200px;
@@ -159,14 +159,14 @@ header {
 
 .filter select:focus,
 .filter input:focus {
-  border-color: #FF4B33;
+  border-color: #b13030;
 }
 
 /* Bouton de recherche */
 button#filter-btn {
   flex: 1 1 50px;
   padding: 10px;
-  background-color: #FF4B33;
+  background-color: #b13030;
   color: white;
   border: none;
   border-radius: 10px; /* Coins arrondis pour le bouton de recherche */
@@ -258,7 +258,7 @@ button#filter-btn:hover {
 
 #contact h2, #contact h3 {
   text-align: center;
-  color: #FF4B33;
+  color: #b13030;
 }
 
 #contact form {
@@ -279,7 +279,7 @@ button#filter-btn:hover {
 
 #contact form button {
   padding: 15px;
-  background-color: #FF4B33;
+  background-color: #b13030;
   color: white;
   border: none;
   border-radius: 5px;
@@ -334,7 +334,7 @@ button#filter-btn:hover {
   }
 }
 footer {
-  background-color: #FF4B33;
+  background-color: #b13030;
   color: white;
   padding: 20px 0;
   font-size: 0.9rem;
@@ -391,7 +391,7 @@ footer {
 }
 
 .footer-links ul li a:hover {
-  color: #FF4B33;
+  color: #b13030;
 }
 
 .footer-bottom {
@@ -409,8 +409,8 @@ footer {
 }
 
 .filters-header h1 {
-  font-size: 2rem; /* Taille uniforme pour les deux lignes */
+  font-size: 3rem; /* Taille uniforme pour les deux lignes */
   margin: 5px 0; /* Espacement entre les lignes */
   font-weight: bold;
-  color: #FF4B33; /* Couleur principale */
+  color: #b13030; /* Couleur principale */
 }
