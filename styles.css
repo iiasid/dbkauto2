@@ -203,24 +203,19 @@ button#filter-btn:hover {
   color: #333;
 }
 
-#annonces {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-}
+@media (min-width: 1024px) {
+  #annonces {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 cards per row */
+    gap: 20px; /* Space between the cards */
+    justify-items: center; /* Center the cards horizontally */
+  }
 
-/* Car cards */
-.car-card {
-  background: white;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  text-align: center;
-  width: 250px;
-  padding: 15px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  .car-card {
+    width: 100%; /* Adjust width to fit within the grid cell */
+    max-width: 250px; /* Optional: limit the maximum width of each card */
+    box-sizing: border-box; /* Ensures padding and border are included in the width */
+  }
 }
 
 .car-card:hover {
@@ -413,4 +408,49 @@ footer {
   margin: 5px 0; /* Espacement entre les lignes */
   font-weight: bold;
   color: #b13030; /* Couleur principale */
+}
+#filters-container-horizontal {
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0; /* Keeps the filter bar at the top when scrolling */
+  z-index: 1000;
+}
+
+#filters-horizontal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#filters-horizontal .filter select {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+#filters-horizontal button#filter-btn {
+  padding: 10px 15px;
+  background-color: #b13030;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#filters-horizontal button#filter-btn:hover {
+  background-color: #0056b3;
+}
+
+#filters-horizontal .search-icon {
+  width: 20px;
+  height: 20px;
 }
