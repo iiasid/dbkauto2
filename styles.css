@@ -127,7 +127,6 @@ header {
   align-items: center;
   border-radius: 0; /* Coins carrés pour le conteneur */
   margin: 0; /* Pas de marge pour coller au header */
-  width: 100%; /* Prendre toute la largeur de la page */
 }
 
 /* Filters section */
