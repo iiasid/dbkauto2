@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DBK Auto - Annonces</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <div class="header-container">
+      <div class="logo-container">
+        <a href="index.html">
+          <img src="icons/logodbk.png" alt="Logo de DBK Auto" class="logo">
+        </a>
+      </div>
+      <button id="burger-menu" class="burger-menu" aria-label="Menu">☰</button>
+      <nav class="menu" id="nav-menu">
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="annonces.html">Annonces</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Filter Section -->
+  <div id="filters-container-horizontal">
+    <div id="filters-horizontal">
+      <div class="filter">
+        <select id="brand" name="brand">
+          <option value="">Marque</option>
+        </select>
+      </div>
+
+      <div class="filter">
+        <select id="model" name="model" disabled>
+          <option value="">Modèle</option>
+        </select>
+      </div>
+
+      <div class="filter">
+        <select id="gearbox" name="gearbox">
+          <option value="">Boîte</option>
+          <option value="manuelle">Manuelle</option>
+          <option value="automatique">Automatique</option>
+        </select>
+      </div>
+
+      <div class="filter">
+        <select id="price" name="price">
+          <option value="">Prix max</option>
+          <option value="10000">10 000</option>
+          <option value="20000">20 000</option>
+          <option value="30000">30 000</option>
+          <option value="40000">40 000</option>
+        </select>
+      </div>
+
+      <button id="filter-btn">
+        <img src="icons/search-13-xxl.png" alt="Rechercher" class="search-icon">
+      </button>
+    </div>
+  </div>
+
+  <!-- Annonces Section -->
+  <section id="catalogue">
+    <div id="annonces"></div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-logo">
+        <a href="index.html">
+          <img src="icons/logodbk.png" alt="Logo de DBK Auto">
+        </a>
+      </div>
+      <div class="footer-info">
+        <p>Adresse : 66 Avenue Lénine, 93800 Pierrefitte-sur-Seine</p>
+        <p>Téléphone : +33 6 70 47 45 02</p>
+        <p>Email : <a href="mailto:drive.dbk@gmail.com">drive.dbk@gmail.com</a></p>
+      </div>
+      <div class="footer-links">
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="annonces.html">Annonces</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 DBK Auto. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
+</html>
